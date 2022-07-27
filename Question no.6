@@ -1,0 +1,16 @@
+/*Program to check whether a year is a leap year or not. Using switch
+statement*/
+#include<stdio.h>
+int main()
+{
+int n;
+printf("Enter the number :");
+scanf("%d",&n);
+if(n%100==0 && n%400==0 || n%100!=0 && n%4==0 ){
+    printf("This is leap yaer");
+}
+else{
+    printf("This not a leap year");
+}
+return 0;
+}
