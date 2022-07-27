@@ -1,0 +1,24 @@
+/*Program to Convert even number into its upper nearest odd number
+Switch Statement.*/
+#include<stdio.h>
+int main()
+{
+int n;
+// input number from user
+printf("Enter the number :");
+scanf("%d",&n);
+// check even conditon before go ahead
+switch(n%2==0){
+  case 1:// if conditon is true 
+  printf("Upper nearest odd number is :%d",n+1);
+  break;
+  case 0: // if condition is false
+  printf("This number is already odd number");
+
+}
+  
+
+
+
+return 0;
+}
