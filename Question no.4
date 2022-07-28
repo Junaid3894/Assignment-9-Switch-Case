@@ -1,0 +1,71 @@
+/*Write a menu driven program with the following options:
+a. Check whether a given set of three numbers are lengths of an
+isosceles triangle or not
+b. Check whether a given set of three numbers are lengths of sides of
+a right angled triangle or not
+c. Check whether a given set of three numbers are equilateral triangle
+or not
+d. Exit*/
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int choice;
+    int a, b, c;
+    while (1)
+    {
+        printf("--------------------------------\n");
+        printf("Enter your choice\n");
+        printf("1.To check isosceles triangle \n");
+        printf("2 To check right angled triangle \n");
+        printf("3.To check equilateral triangle\n");
+        printf("4.Exit\n");
+        scanf("%d", &choice);
+        printf("Enter length of three sides of traingle\n");
+        scanf("%d %d %d", &a, &b, &c);
+        switch (choice)
+        {
+        case 1:
+            if (a == b || b == c || c == a){
+                printf("This is isosceles triangle");
+                break;}
+            else
+            {
+                printf("Not an isosceles traingle ");
+                break;
+            }
+        case 2:
+            if ((a) == (b * b) + (c * c) || (b * b) == (c * c) + (a * a) || (c * c) == (b * b) + (a * a))
+            {
+                printf("This is an right angled traingle");
+                break;
+            }
+            else
+            {
+                printf("Not an right angled traingle");
+                break;
+            }
+        case 3:
+            if (a == b && b == c)
+            {
+                printf(" THis is an equilateral traingle");
+                break;
+            }
+            else
+            {
+                printf("Not an equilateral trangle");
+                break;
+            }
+        case 4:
+        {
+            exit(0);
+        }
+        default:
+        {
+            printf("Invalid choice please choice between 1 to 3 option");
+        }
+        }
+    }
+
+    return 0;
+}
